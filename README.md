@@ -1,90 +1,45 @@
-# TechTim's Astro Bento Portfolio
+# 🚀 Florent Nkita - Portfolio Personnel
 
-This template helps you build a portfolio using Astro, Typescript, React, Tailwind CSS, and Shadcn UI.
+Bienvenue sur le code source de mon portfolio ! Ce projet est une vitrine interactive de mon profil de **Développeur Full-Stack & Produit**, conçue autour d'une interface en grille (Bento-style). 
 
-- [Live Demo](https://techtim42.bai.uno)
-- [GitHub Repo](https://github.com/tim-hub/techtim-astro-bento-portfolio)
+Il met en avant mes expériences (SaaS, Webperf), mes projets techniques (Intégration API Gemini, React Native, Supabase) ainsi que mon mindset sportif.
 
-## Technologies Used
+🌍 **Voir le site en direct :** [portfolio-florent-nkita.vercel.app](https://portfolio-florent-nkita.vercel.app)
 
-This project utilizes the following technologies:
+## 🛠️ Stack Technique
 
-- **Astro**: A modern framework for building fast and efficient websites.
-- **Tailwind CSS**: A utility-first CSS framework for rapid and responsive design.
-- **Shadcn UI**: A collection of accessible and easy-to-use UI components.
-- **React**: For interactive components and advanced functionality.
-- **TypeScript**: For static type checking and improved developer experience.
+Ce portfolio est construit avec une exigence stricte de performance et de fluidité (Webperf) :
+* **Framework :** [Astro](https://astro.build/) (Génération de site statique ultra-rapide)
+* **Composants :** React
+* **Stylisation :** Tailwind CSS
+* **Langage :** TypeScript
+* **Déploiement :** Vercel
 
-## Requirements
+## ✨ Fonctionnalités Clés
+* **Architecture Bento :** Interface moderne, claire et responsive.
+* **Collections de Contenu (Markdown) :** Gestion structurée des projets, des expériences et des articles via l'API Content d'Astro.
+* **Mode Sombre/Clair :** Support natif avec persistance du thème.
+* **Performance Optimisée :** Chargement instantané et respect strict des Core Web Vitals.
 
-Before starting, make sure you have the following requirements installed:
+## 🚀 Installation Locale
 
-- Node.js (version 18 or higher)
-- pnpm (version 8 or higher)
+Si vous souhaitez faire tourner ce projet en local :
 
-## Installation
+1. Clonez le dépôt :
+\`\`\`bash
+git clone https://github.com/flonkita/portfolio.git
+\`\`\`
 
-To install and run the project locally, follow these steps:
+2. Installez les dépendances :
+\`\`\`bash
+npm install
+\`\`\`
 
-1. Clone this repository:
+3. Lancez le serveur de développement :
+\`\`\`bash
+npm run dev
+\`\`\`
+Le site sera accessible sur \`http://localhost:4321\`.
 
-   ```bash
-   git clone https://github.com/tim-hub/techtim-astro-bento-portfolio
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd techtim-astro-bento-portfolio
-   ```
-
-3. Install the dependencies:
-
-   ```bash
-   pnpm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   pnpm run dev
-   ```
-
-5. Open your browser and visit `http://localhost:4312` to see your portfolio in action.
-6. Config your site
-   1. Edit `src/content/profileData.ts` to add your profile data
-   2. Edit `astro.config.mjs` to change the site information
-
-
-## Important Considerations
-
-- **Accessibility**: Ensure your portfolio is accessible to all users, including those with disabilities.
-- **SEO**: Optimize your portfolio for search engines by adding meta tags and relevant content.
-- **Performance**: Use modern web development practices to ensure optimal performance, such as lazy loading images and minimizing CSS/JS.
-- **Responsive Design**: Make sure your portfolio looks good on devices of all sizes, from mobile to desktop screens.
-
-## Contributions
-
-Contributions are welcome! If you have ideas or improvements, please open an issue or submit a pull request.
-
-## License
-
-- This source codes are licensed under the [MIT License](LICENSE).
-- The content (`src/content/`) of the portfolio is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-- The images (`public/`) used in the project are for template demonstration purposes only and should not be reused without permission.
-
-## Inspiration
-
-This project was inspired by several outstanding portfolios. Here are some that served as references:
-
-- [Bento Like Portfolio](https://github.com/Ladvace/astro-bento-portfolio)
-- [Minimal and bento Portfolio ](https://github.com/bue221/astro-portfolio)
-
-### Differences / Improvements
-
-- Centralised data management inside one folder
-  - Use Astro recommended [Content Collection](https://docs.astro.build/en/guides/content-collections/) to manage data
-  - `src/content` folder for blog posts, project data and profile data
-  - `src/content/profileData.ts` for general profile data
-- Tags system
-- Simplified Dark/Light mode toggle
+---
+*Ce projet est basé sur un concept original de [TechTim](https://github.com/tim-hub/techtim-astro-bento-portfolio), entièrement remanié et adapté pour refléter mon parcours et mes exigences techniques.*
