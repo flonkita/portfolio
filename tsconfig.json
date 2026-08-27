@@ -5,6 +5,7 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
+    "ignoreDeprecations": "6.0", // ou "6.0" comme suggéré par ton erreur
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
