@@ -3,7 +3,7 @@
 First, run the development server:
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 Check http://localhost:4321/
