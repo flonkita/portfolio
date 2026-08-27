@@ -26,20 +26,20 @@ Ce portfolio est construit avec une exigence stricte de performance et de fluidi
 Si vous souhaitez faire tourner ce projet en local :
 
 1. Clonez le dépôt :
-\`\`\`bash
+```bash
 git clone https://github.com/flonkita/portfolio.git
-\`\`\`
+```
 
 2. Installez les dépendances :
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Lancez le serveur de développement :
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
-Le site sera accessible sur \`http://localhost:4321\`.
+```
+Le site sera accessible sur `http://localhost:4321`.
 
 ---
 *Ce projet est basé sur un concept original de [TechTim](https://github.com/tim-hub/techtim-astro-bento-portfolio), entièrement remanié et adapté pour refléter mon parcours et mes exigences techniques.*
