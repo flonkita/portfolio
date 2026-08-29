@@ -8,57 +8,33 @@ const tagsMap = await getAndGroupUniqueTags();
 
 const tags = tagsMap.keys();
 
-const tagsWithFrequency = []
+const tagsWithFrequency: any[] = [];
 
 tagsMap.forEach((value, key) => {
-  tagsWithFrequency.push({value: key, count: value.length});
+  tagsWithFrequency.push({ value: key, count: value.length });
 });
 
 // sort tags by frequency
-tagsWithFrequency.sort((a, b) => b.count - a.count);
-
+tagsWithFrequency.sort((a: any, b: any) => b.count - a.count);
 ---
-<IndexPageLayout title="Tags"
-                 description="All tags used in this website"
-                 subTitle="Tags">
+
+<IndexPageLayout
+  title="Compétences & Tags"
+  description="Toutes les technologies, compétences et mots-clés abordés dans ce portfolio."
+  subTitle="Compétences & Mots-clés"
+>
   <div class="flex flex-col gap-4">
     <div class="overflow-auto">
-      <h3 class="mb-2 text-lg font-bold">Tags Usage</h3>
-      <TagsBarChart
-        tags={tagsWithFrequency.slice(0, 10)}
-        client:load
-      />
+      <h3 class="mb-2 text-lg font-bold">Répartition</h3>
+      <TagsBarChart tags={tagsWithFrequency.slice(0, 10)} client:load />
     </div>
-
     <div>
-      <h3 class="mb-2 text-lg font-bold">
-        Word Cloud
-      </h3>
-      <WordCloud words={tagsWithFrequency} client:load/>
+      <h3 class="mb-2 text-lg font-bold">Nuage de mots</h3>
+      <WordCloud words={tagsWithFrequency} client:load />
       <blockquote class="mt-6 border-l-2 pl-6 text-xs font-light italic">
-        You can click on the tags above in the word cloud to see all the content related to that tag.
+        Vous pouvez cliquer sur les mots-clés ci-dessus pour découvrir tous les
+        projets et expériences associés.
       </blockquote>
     </div>
-
-    <div class="sr-only">
-      <h3 class="mb-2 text-lg font-bold">
-        All Tags sorted by frequency
-      </h3>
-      <ul class="list-inside list-disc">
-        {
-          tagsWithFrequency.map((tag) => {
-            return (
-              <li>
-                <a href={`/tags/${tag.value}`} class="hover:font-bold">
-                  {tag.value} ({tag.count})
-                </a>
-              </li>
-            )
-          })
-        }
-      </ul>
-    </div>
-
   </div>
 </IndexPageLayout>
-

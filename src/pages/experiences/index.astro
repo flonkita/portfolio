@@ -23,9 +23,9 @@ experiences.sort((a: any, b: any) => {
 ---
 
 <IndexPageLayout
-  title="Experiences"
-  description="Places I have worked in, this is just a rough timeline, not include all details."
-  subTitle="Experiences"
+  title="Florent Nkita - Expériences"
+  description="Mon parcours professionnel et les entreprises avec lesquelles j'ai collaboré."
+  subTitle="Expériences Professionnelles"
 >
   <Table>
     <!--<TableHeader>-->
@@ -40,7 +40,7 @@ experiences.sort((a: any, b: any) => {
             <TableCell className="font-medium ">
               <div class="flex flex-col gap-1 min-w-20">
                 <a
-                  href={"/experiences/" + entry.slug || ""}
+                  href={"/experiences/" + entry.slug}
                   class={`font-semibold hover:font-extrabold ${entry?.slug ? "text-primary" : "text-foreground"}`}
                 >
                   {entry.data.title}

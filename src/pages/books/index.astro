@@ -3,37 +3,43 @@ import { getCollection } from "astro:content";
 import { formateLocalDate, formateLocalMonth } from "../../lib/utils";
 import { Badge } from "../../components/ui/badge";
 import IndexPageLayout from "../../layouts/IndexPageLayout.astro";
-import { TableCell, TableRow, Table, TableHeader, TableHead, TableBody } from "../../components/ui/table";
+import {
+  TableCell,
+  TableRow,
+  Table,
+  TableHeader,
+  TableHead,
+  TableBody,
+} from "../../components/ui/table";
 import { ArrowRight } from "lucide-react";
 import ContentTags from "../../components/ContentTags.astro";
 
-const books = await getCollection('books');
+const books = await getCollection("books");
 
-books.sort((a, b) => {
-  return new Date(b.data.startDate) - new Date(a.data.startDate);
+books.sort((a: any, b: any) => {
+  return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
 });
 ---
-<IndexPageLayout title="Books I have read"
-                 description="I like to read books, both fiction and non-fiction. Here are some of the books I have read."
-                 subTitle="Books">
 
+<IndexPageLayout
+  title="Florent Nkita - Mindset & Passions"
+  description="Ce qui forge mon mental au quotidien : sport, compétition et tech."
+  subTitle="Mindset & Passions"
+>
   <Table>
     <TableBody>
       {
-        books.map((entry) => (
+        books.map((entry: any) => (
           <TableRow key={entry.slug}>
             <TableCell className="font-medium ">
               <div class="flex flex-col gap-1 min-w-20">
                 <a
-                  href={'/books/' + entry.slug ?? ''}
-                  class={`font-semibold hover:font-extrabold ${entry?.slug ? 'text-primary' : 'text-foreground'}`}
+                  href={"/books/" + entry.slug}
+                  class={`font-semibold hover:font-extrabold ${entry?.slug ? "text-primary" : "text-foreground"}`}
                 >
                   {entry.data.title}
                 </a>
-                <div class="mb-4 text-sm">
-                  {entry.data.author}
-                </div>
-
+                <div class="mb-4 text-sm">{entry.data.author}</div>
               </div>
             </TableCell>
             <TableCell>
@@ -41,12 +47,11 @@ books.sort((a, b) => {
                 {entry.data.company}
 
                 <ContentTags tags={entry.data.tags} />
-
               </div>
             </TableCell>
             <TableCell>
-              <a href={'/books/' + entry.slug}>
-                <ArrowRight/>
+              <a href={"/books/" + entry.slug}>
+                <ArrowRight />
               </a>
             </TableCell>
           </TableRow>
@@ -54,5 +59,4 @@ books.sort((a, b) => {
       }
     </TableBody>
   </Table>
-
 </IndexPageLayout>

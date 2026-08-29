@@ -1,5 +1,5 @@
 ---
-import ProjectCard from "src/components/ProjectCard.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
 import IndexPageLayout from "../../layouts/IndexPageLayout.astro";
@@ -16,9 +16,9 @@ posts.sort((a: any, b: any) => {
 ---
 
 <IndexPageLayout
-  title="Blog"
-  description="This is a simple blog for my this profile website."
-  subTitle="My Simple Blog"
+  title="Florent Nkita - Veille Tech"
+  description="Articles et retours d'expérience sur ma veille technologique."
+  subTitle="Ma Veille Tech"
 >
   <div class="grid grid-cols-3 gap-3">
     {

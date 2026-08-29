@@ -2,7 +2,6 @@
 import { getAndGroupUniqueTags } from "../../lib/utils";
 import { PROFILE } from "../../content/profileData";
 
-
 const tagsMap = await getAndGroupUniqueTags();
 
 const skills = PROFILE.skills;
@@ -17,39 +16,44 @@ const skills = PROFILE.skills;
     {PROFILE.headLine2}
   </p>
 
-  <hr/>
+  <hr />
 
-  <p class="text-sm font-light">
-    J'utilise les technologies suivantes :
-  </p>
+  <p class="text-sm font-light">J'utilise les technologies suivantes :</p>
   <ul class="list-inside list-disc">
     {
-      skills.map((skill) => {
-        if (tagsMap.has(skill)) {
-          return (
+      skills.map((skillLine) => {
+        // On coupe les chaînes "ex: React / Next.js " en deux éléments distincts
+        const individualSkills = skillLine.split(" / ");
 
-            <li>
-              <a href=`/tags/${skill}` class=" hover:font-bold">
-                {skill}
-              </a>
-            </li>
-          )
-        } else {
-          return (
-            <li>
-              <span>
-                {skill}
-              </span>
-            </li>
-          )
-        }
-
+        return (
+          <li>
+            {individualSkills.map((skill, index) => (
+              <>
+                {tagsMap.has(skill) ? (
+                  <a
+                    href={`/tags/${skill}`}
+                    class="hover:font-bold underline decoration-primary/50 underline-offset-4"
+                  >
+                    {skill}
+                  </a>
+                ) : (
+                  <span>{skill}</span>
+                )}
+                {/* On remet le slash visuel entre les éléments, sauf pour le dernier */}
+                {index < individualSkills.length - 1 ? " / " : ""}
+              </>
+            ))}
+          </li>
+        );
       })
     }
   </ul>
 
   <p class="text-sm font-light">
-    Découvrez mes <a href="/projects" class="underline hover:font-bold">Projets</a> et mes <a href="/experiences" class="underline hover:font-bold">Expériences</a> en détail.
+    Découvrez mes <a href="/projets" class="underline hover:font-bold"
+      >Projets</a
+    > et mes <a href="/experiences" class="underline hover:font-bold"
+      >Expériences</a
+    > en détail.
   </p>
 </div>
-

@@ -21,7 +21,7 @@ projects = projects.slice(0, 3);
     projects.slice(0, 3).map((project: any) => (
       <div>
         <h3 class="text-lg font-semibold text-primary">
-          <a href={`/projects/${project.slug}`} class="hover:underline">
+          <a href={`/projets/${project.slug}`} class="hover:underline">
             {project.data.title}
           </a>
         </h3>
@@ -35,7 +35,7 @@ projects = projects.slice(0, 3);
       </div>
     ))
   }
-  <a href="/projects">
-    <Button variant="link" className="pl-0"> View More</Button>
+  <a href="/projets">
+    <Button variant="link" className="pl-0"> Voir plus</Button>
   </a>
 </div>

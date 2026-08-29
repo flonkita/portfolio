@@ -1,30 +1,27 @@
 {
-  "site": "https://techtim42.bai.uno",
-  "id": "TechTim42",
-  "name": "@tim-hub/techtim42",
+  "site": "https://portfolio-florent-nkita.vercel.app",
+  "id": "FlorentNkita",
+  "name": "@flonkita/portfolio",
   "version": "1.0.0",
-  "fullName": "Tech Tim",
-  "description": "Learn, Share and Grow ❤️ -- Software Engineer | AWS Professional | Open Source Lover  --☘️ Be more productive, Better in communicating, Contribute more to community ",
+  "fullName": "Florent Nkita",
+  "description": "Portfolio de Florent Nkita - Développeur Full-Stack & Produit. Construit avec Astro, React et Tailwind CSS.",
   "author": {
-    "name": "Tech Tim",
-    "url": "https://techtim42.bai.uno"
+    "name": "Florent Nkita",
+    "url": "https://portfolio-florent-nkita.vercel.app"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tim-hub/techtim-astro-bento-portfolio"
+    "url": "https://github.com/flonkita/portfolio"
   },
-  "homepage": "https://techtim42.bai.uno",
+  "homepage": "https://portfolio-florent-nkita.vercel.app",
   "keywords": [
     "astro",
     "portfolio",
-    "blog",
-    "projects",
-    "experience",
-    "tags system",
+    "developer",
+    "full-stack",
     "tailwindcss",
     "react",
-    "bento",
-    "shadcn/ui"
+    "bento"
   ],
   "license": "MIT",
   "scripts": {
@@ -32,7 +29,8 @@
     "dev": "astro dev",
     "format": "prettier -w . --cache",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "generate:favicons": "npx tsx scripts/generate-favicons.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.5",
@@ -64,10 +62,10 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.0",
     "@types/react-tagcloud": "^2.3.2",
+    "favicons": "^7.3.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "typescript": "^5.6.2"
-  },
-  "packageManager": "pnpm@8.15.5"
+  }
 }

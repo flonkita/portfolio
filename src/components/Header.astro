@@ -1,9 +1,9 @@
 ---
-import {buttonVariants} from '../components/ui/button'
-import {ModeToggle} from '../components/react/ThemeToggle'
-import {PROFILE} from "../content/profileData";
+import { buttonVariants } from "../components/ui/button";
+import { ModeToggle } from "../components/react/ThemeToggle";
+import { PROFILE } from "../content/profileData";
 
-const SITE = PROFILE.site
+const SITE = PROFILE.site;
 ---
 
 <header
@@ -19,44 +19,40 @@ const SITE = PROFILE.site
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
       <nav class="flex items-center space-x-1">
-        <a
-          href="/posts"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          Blog
+        <a href="/posts" class={buttonVariants({ variant: "ghost" })}>
+          Veille Tech
         </a>
-        <a
-          href="/projects"
-          class={buttonVariants({variant: 'ghost'})}
-        >
+        <a href="/projets" class={buttonVariants({ variant: "ghost" })}>
           Projets
+        </a>
+        <a href="/experiences" class={buttonVariants({ variant: "ghost" })}>
+          Expériences
         </a>
         <a
           href={PROFILE.repo}
           target="_blank"
           rel="noreferrer"
-          class={buttonVariants({variant: 'ghost'})}
+          class={buttonVariants({ variant: "ghost" })}
         >
           GitHub
         </a>
 
-        <ModeToggle transition:persist client:load/>
+        <ModeToggle transition:persist client:load />
       </nav>
     </div>
   </div>
 </header>
 
-
 <script is:inline>
-  document.addEventListener('astro:after-swap', function () {
-    if (localStorage.getItem('theme') === 'dark')
-      document.documentElement.classList.toggle('dark', true)
-  })
+  document.addEventListener("astro:after-swap", function () {
+    if (localStorage.getItem("theme") === "dark")
+      document.documentElement.classList.toggle("dark", true);
+  });
 
   const getThemePreference = () => {
-    return localStorage.getItem('theme')
-  }
+    return localStorage.getItem("theme");
+  };
 
-  const isDark = getThemePreference() === 'dark'
-  document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 </script>
